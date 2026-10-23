@@ -1,6 +1,7 @@
 // 1. The names of the herb data files
 const herbNames = ["basil", "mint", "rosemary", "thyme", "parsley"];
 
+<<<<<<< HEAD
 // 2. Find the parts of the page we will update
 const grid = document.querySelector("#herb-grid");
 const search = document.querySelector("#herb-search");
@@ -22,6 +23,15 @@ async function loadGarden() {
     } catch (error) {
       console.log("Could not load:", name);
     }
+=======
+const list = document.querySelector("#herbs-list")
+const count = document.querySelector(".count")
+
+async function loadHerbs() {
+  const response = await fetch("data/herbs.json")
+  if (!response.ok) {
+    throw new Error(`Could not load ${response.url}: ${response.status} ${response.statusText}`)
+>>>>>>> 4dd80364a79b82e8a0586cd1b2b1887999a1a367
   }
 
   showCards();
